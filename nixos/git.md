@@ -1,7 +1,7 @@
 To use oauth/browser with git/jj
 
 # credential manager
-## succeeded attampt, pure nix
+## succeeded attempt, pure nix
 Credits/source: https://discourse.nixos.org/t/git-credential-manager-on-nixos/25742/7
 NOTE: that 
 - `git` is installed via `programs.git` not via `systemPackages`
