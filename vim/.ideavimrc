@@ -1,0 +1,35 @@
+" my cfg ------>
+""" Map leader to space ---------------------
+let mapleader=" "
+
+" Normally the { and } motions only match completely empty lines. 
+" With this plugin lines that only contain whitespace are also matched.
+Plug 'dbakker/vim-paragraph-motion'
+" https://github.com/tpope/vim-surround/blob/master/doc/surround.txt
+" delete (d) and change (c) works "around cursor"
+" add (ys) needs a text object (iw, i", etc) as parameter, i.e. ysiw" adds " around "word"
+" ds", ds), dst - etc - delete surround
+" cs"' (change surround <from> <to>)
+" ys[motion][surround with what]
+" yss[surround with what] - whole line ignorin trail/lead whitespace
+" ysWf[functionname] - add function call with selected object as arg (C style)
+Plug 'tpope/vim-surround'
+" to consider
+" Sneak: https://github.com/JetBrains/ideavim/wiki/IdeaVim-Plugins#sneak-jump-to-any-location-specified-by-two-characters
+
+inoremap jk <Esc>
+set ideajoin
+set clipboard=unnamedplus,unnamed
+
+" shows popup with hind under hightlighted word
+map <leader>i <Action>(ShowHoverInfo)
+
+set ideaput
+set ignorecase
+set relativenumber
+set commentary
+set quickscope
+set which-key
+
+map <C-0> <Action>(NextDiff)
+map <C-9> <Action>(PreviousDiff)
