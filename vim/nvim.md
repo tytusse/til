@@ -8,7 +8,7 @@ From: https://tech.serhatteker.com/post/2022-07/dump-command-output-to-buffer-in
 
 # readonly
 - https://neovim.io/doc/user/starting/#-R
-- ’nvim -R <filename>’
+- `nvim -R <filename>`
 
 # tutorials
 - https://builtin.com/software-engineering-perspectives/neovim-configuration
