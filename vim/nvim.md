@@ -6,6 +6,10 @@ From: https://tech.serhatteker.com/post/2022-07/dump-command-output-to-buffer-in
 # print current file path
 `:echo expand('%:p:h')`
 
+# readonly
+- https://neovim.io/doc/user/starting/#-R
+- ’nvim -R <filename>’
+
 # tutorials
 - https://builtin.com/software-engineering-perspectives/neovim-configuration
 - https://www.baeldung.com/linux/vim-neovim-configs
