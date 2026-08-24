@@ -4,4 +4,4 @@ For win it will be (using powershell notation): `$env:LOCALAPPDATA\nvim` (i.e. `
 
 For the moment config has bare essentials like clipboard, line numbers and tabs-as-spaces.
 
-[Used cfg](simplistic-lua.md)
+[Used cfg](simplistic-init.lua)
