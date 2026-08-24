@@ -46,3 +46,18 @@ Breakdown:
 - `| pick()` we are only interested in specifc properties of "data", most importantly - "old"
 - `| select(.card | has("desc"))` finally, we filter actions to those that changed description
   In Trallo JSON, if `action[].data.card` has `desc`, then the action included "change of description"
+
+# Selecting all storage class names referenced by PVCs in k8s YAML file
+```bash
+yq 'select(.kind == "PersistentVolumeClaim") 
+    | .name = .metadata.name
+    | .storageClassName = .spec.storageClassName
+    | pick(["name", "storageClassName"])
+```
+
+# select given Azure subscription from account
+```bash
+az account list | yq '.[]|select(.id =="XXX-XXX-XXX")' -P
+```
+
+
