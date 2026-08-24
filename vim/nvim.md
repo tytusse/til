@@ -9,6 +9,11 @@ From: https://tech.serhatteker.com/post/2022-07/dump-command-output-to-buffer-in
 # readonly
 - https://neovim.io/doc/user/starting/#-R
 - `nvim -R <filename>`
+- to allow edit but prevent save: inside vim/nvim: `:set readonly` (https://neovim.io/doc/user/options/#'readonly')
+- to not allow edit: `set noma` 
+    - https://neovim.io/doc/user/options/#'modifiable'
+    - option is `modifiable`, short: `ma`, in vim `set no<option_name>` sets toggle optiob to `false/off,`
+      hence `set noma` => "set modifiable to off"
 
 # tutorials
 - https://builtin.com/software-engineering-perspectives/neovim-configuration
