@@ -60,4 +60,25 @@ yq 'select(.kind == "PersistentVolumeClaim")
 az account list | yq '.[]|select(.id =="XXX-XXX-XXX")' -P
 ```
 
+# pull all SC from current k8s cluster
 
+
+```bash
+kubectl get sc -o yaml \
+    | yq '[.items[] 
+          | select(.parameters.protocol == "nfs") 
+          | .mine.name = .metadata.name
+          | .mine.server = .parameters.server
+          | .mine.shareName = .parameters.shareName
+          | .mine
+          ]'
+```
+
+# pull SCs, filter by name prefix
+
+```bash
+kubectl get sc -o yaml \
+    | yq '[.items[]
+        | select(.parameters.protocol == "nfs" and .metadata.name == "mu-prefix-for-sc*")
+        ]'
+```
