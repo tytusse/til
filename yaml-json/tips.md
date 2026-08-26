@@ -52,7 +52,8 @@ Breakdown:
 yq 'select(.kind == "PersistentVolumeClaim") 
     | .name = .metadata.name
     | .storageClassName = .spec.storageClassName
-    | pick(["name", "storageClassName"])
+    | pick(["name", "storageClassName"])' \
+    path/to/my.yaml
 ```
 
 # select given Azure subscription from account
