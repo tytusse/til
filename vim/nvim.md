@@ -4,6 +4,9 @@
 From: https://tech.serhatteker.com/post/2022-07/dump-command-output-to-buffer-in-neovim/
 
 # print current file path
+`:echo expand('%:p')`
+
+# print current file parent folder
 `:echo expand('%:p:h')`
 
 # readonly
