@@ -82,3 +82,19 @@ kubectl get sc -o yaml \
         | select(.parameters.protocol == "nfs" and .metadata.name == "mu-prefix-for-sc*")
         ]'
 ```
+
+# show volumes and mounts for k8s deployments/stateful-sets
+- Below is for stateful-set, can be others as well (i.e. "deployment")
+- Below shows data for ALL resources in NS - that is why `.metadata.name` was included.
+
+```bash
+kubectl get StatefulSet -n NSXXX -o yaml \
+  | yq '[ .items[]
+        | .mine.name = .metadata.name
+        | .mine.mounts = (
+            .spec.template.spec.containers[] | .volumeMounts
+          )
+        | .mine.volumes = .spec.template.spec.volumes
+        | .mine
+        ]'
+```
