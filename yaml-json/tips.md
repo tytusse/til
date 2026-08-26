@@ -62,7 +62,6 @@ az account list | yq '.[]|select(.id =="XXX-XXX-XXX")' -P
 
 # pull all SC from current k8s cluster
 
-
 ```bash
 kubectl get sc -o yaml \
     | yq '[.items[] 
@@ -80,6 +79,19 @@ kubectl get sc -o yaml \
 kubectl get sc -o yaml \
     | yq '[.items[]
         | select(.parameters.protocol == "nfs" and .metadata.name == "mu-prefix-for-sc*")
+        ]'
+```
+
+# pull k8s NFS storage classes by share name
+- apart from filtering, it also limits the output to NFS parameters (it includes SC name)
+```bash
+kubectl get sc -o yaml \
+  | yq '[.items[] 
+        | select(.parameters.protocol == "nfs") 
+        | select(.parameters.shareName == "my-share-name")
+        | .mine.name = .metadata.name
+        | .mine.parameters = .parameters
+        | .mine
         ]'
 ```
 
