@@ -11,6 +11,7 @@ My favourites (includes ones not on list under link)
 - zoxide (https://github.com/ajeetdsouza/zoxide)
     alternative to cd, needs setup and may require `fzf`
 - tldr - display cli examples (alt to manpages)
+- dyff - to compare yaml's, https://github.com/homeport/dyff, `yay dyff`
 
 To consider
 - rclone (i.e., to sync keepass)
