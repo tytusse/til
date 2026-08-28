@@ -9,7 +9,8 @@ git-credential-manager configure
 ```
 ## WSL / Windows
 - One can either use windows via `/mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe` or linux via vanilla `dotnet tool` as above.
-- The `/mpt/...` one requires installation of git on windows, but has advantage of using windows secrets store (if one counts it as advantage)
+- The `/mpt/...` one requires installation of git on windows, but has advantage of using windows secrets store (if one counts it as advantage).
+
 Personally, I prefer Linux one.
 
 - May need to remove old `credential.helper` from `git config edit --global` (note that the empty entry is OK!!!)
