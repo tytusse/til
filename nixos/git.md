@@ -36,7 +36,7 @@ On the other hand, hacking is needed on nixos more when not using nix, i.e. beca
 ## FAILED attempt via dotnet tool
 Requires dotnet 10 at time of writing 
 
-Installed using instructions: https://github.com/git-ecosystem/git-credential-manager/blob/release/docs/install.md#net-tool
+Installed using instructions: https://github.com/git-ecosystem/git-credential-manager/blob/main/docs/install.md#net-tool
 
 ```bash
 dotnet tool install -g git-credential-manager
