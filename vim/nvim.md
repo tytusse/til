@@ -18,6 +18,19 @@ From: https://tech.serhatteker.com/post/2022-07/dump-command-output-to-buffer-in
     - option is `modifiable`, short: `ma`, in vim `set no<option_name>` sets toggle optiob to `false/off,`
       hence `set noma` => "set modifiable to off"
 
+# open new empty: buffer, tab, window
+- `:enew` - "Edit a new, unnamed buffer"
+  - with NvChad, adds buffer and "tab"
+- `:tabnew` - new empty tab, with "vanilla" adds "tab", with NvChad it is harder to explain - it adds a sort of group of tabs with indicator in top-right corner
+  - I *think* that vim tabs are exactly like that - groups of buffers;
+- `:vnew` / `:new` - new empty window at bottom (new) / right (vnew)
+
+# closing tabs, buffers windows
+- `:bd` closes buffer
+- `:q` closes current window - **if it is the only window, then whole app closes**
+- `:qa` closes all windows and hecne the whole app
+- `:tabc` close tab page
+
 # tutorials
 - https://builtin.com/software-engineering-perspectives/neovim-configuration
 - https://www.baeldung.com/linux/vim-neovim-configs
