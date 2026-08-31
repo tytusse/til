@@ -9,3 +9,9 @@ or for commands in PATH (handy on nixos)
 or alternative
 `readlink -f symlinkName`
 
+# find file by name
+- `find -name 'file-pattern'`
+- `find -name '*omething*'`
+
+# find file case insensitive
+- `find -iname '*OmetHinG*'`
