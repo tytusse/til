@@ -31,6 +31,27 @@ From: https://tech.serhatteker.com/post/2022-07/dump-command-output-to-buffer-in
 - `:qa` closes all windows and hecne the whole app
 - `:tabc` close tab page
 
+# syntax highlighting
+## For nvchad - 
+It uses treesitter. List of languages: https://github.com/nvim-treesitter/nvim-treesitter/blob/main/SUPPORTED_LANGUAGES.md
+
+Config is in `~/.config/nvim/lua/plugins/init.lua`, look for "nvim-treesitter/nvim-treesitter".
+Add lang you want to `opts.ensure_installed` list, take name from here: https://github.com/nvim-treesitter/nvim-treesitter/blob/main/SUPPORTED_LANGUAGES.md.
+
+i.e.,
+
+```lua
+{
+-- other plugins here (skipped)
+  {
+  	"nvim-treesitter/nvim-treesitter",
+  	opts = {
+  		ensure_installed = { "vim", "lua", "vimdoc", "html", "css", "c_sharp" },
+-- (... skipped part ...)
+  }
+}
+```
+
 # tutorials
 - https://builtin.com/software-engineering-perspectives/neovim-configuration
 - https://www.baeldung.com/linux/vim-neovim-configs
