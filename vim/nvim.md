@@ -31,10 +31,13 @@ From: https://tech.serhatteker.com/post/2022-07/dump-command-output-to-buffer-in
 - `:qa` closes all windows and hecne the whole app
 - `:tabc` close tab page
 
-# syntax highlighting
-## For nvchad - 
-It uses treesitter. List of languages: https://github.com/nvim-treesitter/nvim-treesitter/blob/main/SUPPORTED_LANGUAGES.md
+# syntax highlighting (for nvchad/lazy/treesitter)
+NVChad uses treesitter. "What worked" should be ok for any other setup with treesitter installed.
 
+## What worked
+Issue `:TSInstall <your_language>` command, i.e. `:TSInstall fsharp` installs fsharp support.
+
+## What DID NOT work
 Config is in `~/.config/nvim/lua/plugins/init.lua`, look for "nvim-treesitter/nvim-treesitter".
 Add lang you want to `opts.ensure_installed` list, take name from here: https://github.com/nvim-treesitter/nvim-treesitter/blob/main/SUPPORTED_LANGUAGES.md.
 
