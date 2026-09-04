@@ -31,6 +31,11 @@ From: https://tech.serhatteker.com/post/2022-07/dump-command-output-to-buffer-in
 - `:qa` closes all windows and hecne the whole app
 - `:tabc` close tab page
 
+# file explore - classic nvim/vim - `:Explore`
+- `:Sex` (yes you reading correctly) - this means `:Explore` in horizontal split (shorthand for `:Sexplore`)
+- OG command is `:Explore` (or `Ex`) which opens file explorer in current window,
+  also can use `:Vexplore` or `:Vex` for vertical split.
+
 # syntax highlighting (for nvchad/lazy/treesitter)
 NVChad uses treesitter. "What worked" should be ok for any other setup with treesitter installed.
 
