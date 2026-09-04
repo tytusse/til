@@ -36,6 +36,10 @@ From: https://tech.serhatteker.com/post/2022-07/dump-command-output-to-buffer-in
 - OG command is `:Explore` (or `Ex`) which opens file explorer in current window,
   also can use `:Vexplore` or `:Vex` for vertical split.
 
+# terminal - `:term`
+- `:term` (`:te`) opens in "new buffer" meaning it will replace current window
+- `:hor te`, `:vert te` opens in split
+
 # syntax highlighting (for nvchad/lazy/treesitter)
 NVChad uses treesitter. "What worked" should be ok for any other setup with treesitter installed.
 
