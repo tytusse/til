@@ -40,6 +40,13 @@ From: https://tech.serhatteker.com/post/2022-07/dump-command-output-to-buffer-in
 - `:term` (`:te`) opens in "new buffer" meaning it will replace current window
 - `:hor te`, `:vert te` opens in split
 
+# light or dark mode
+- `:set background=light` or `:set background=dark`
+- or in `*.lua`
+  ```lua
+  vim.opt.background = "light" -- or "dark"
+  ```
+
 # syntax highlighting (for nvchad/lazy/treesitter)
 NVChad uses treesitter. "What worked" should be ok for any other setup with treesitter installed.
 
