@@ -25,6 +25,13 @@ From: https://tech.serhatteker.com/post/2022-07/dump-command-output-to-buffer-in
   - I *think* that vim tabs are exactly like that - groups of buffers;
 - `:vnew` / `:new` - new empty window at bottom (new) / right (vnew)
 
+# split window
+- `:split` / `:sp` horizontal (top-bottom)
+- `:vsplit` / `:vs` vertical (left-right)
+
+# open file in new window (`:split`, `:vsplit`)
+- split with file name parameter, i.e., `:sp <filepath>`
+
 # closing tabs, buffers windows
 - `:bd` closes buffer
 - `:q` closes current window - **if it is the only window, then whole app closes**
