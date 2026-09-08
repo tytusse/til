@@ -31,6 +31,7 @@ From: https://tech.serhatteker.com/post/2022-07/dump-command-output-to-buffer-in
 
 # open file in new window (`:split`, `:vsplit`)
 - split with file name parameter, i.e., `:sp <filepath>`
+- opened file will be on the right or top 
 
 # closing tabs, buffers windows
 - `:bd` closes buffer
