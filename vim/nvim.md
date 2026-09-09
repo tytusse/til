@@ -43,6 +43,10 @@ From: https://tech.serhatteker.com/post/2022-07/dump-command-output-to-buffer-in
 - `:Sex` (yes you reading correctly) - this means `:Explore` in horizontal split (shorthand for `:Sexplore`)
 - OG command is `:Explore` (or `Ex`) which opens file explorer in current window,
   also can use `:Vexplore` or `:Vex` for vertical split.
+# changing dir
+- `:cd yourfolder`
+
+https://stackoverflow.com/a/2288780
 
 # terminal - `:term`
 - `:term` (`:te`) opens in "new buffer" meaning it will replace current window
