@@ -15,3 +15,10 @@ or alternative
 
 # find file case insensitive
 - `find -iname '*OmetHinG*'`
+
+# paths
+- `dirname "some/path"`
+- `dirname (which "some-file")` - dir for some command
+- `dirname (realpath (which some-command))` - if some-command is symlink, then resolve its real path and then show dir path 
+- `realpath "somepath/.."` - for when we want relative path
+- `realpath "$(dirname (realpath (which some-command)))/.."` - for when we want relative path for something being a result of a command itself
