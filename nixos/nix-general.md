@@ -1,5 +1,9 @@
 # resolve package root dir by associated command name 
-If we know command name: `realpath "$(dirname (realpath (which some-command)))/.."`.
+For example, if we have path-visible command named `some-command`, then
+
+```fish
+realpath "$(dirname (realpath (which some-command)))/.."
+```
 
 This assumes that "some-command" is inside "bin" subdir in nix store package path, i.e.
 `realpath (which g++)` --> `/nix/store/06i01ld530x5pnhy1wmz5rbs8491s9x8-gcc-15.2.0/bin/g++`
