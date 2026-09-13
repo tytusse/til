@@ -1,3 +1,5 @@
+**Note**: examples are in `fish`
+
 # resolve package root dir by associated command name 
 For example, if we have path-visible command named `some-command`, then
 
