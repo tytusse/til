@@ -67,3 +67,4 @@ plt.ylim(-5, 5)
 
 plt.show()
 ```
+![sample-plot](./jupyter-sample-plot.png)
