@@ -2,7 +2,7 @@
 The [docs](https://learn.microsoft.com/en-us/dotnet/api/system.diagnostics.stacktracehiddenattribute?view=net-10.0) say
 > Types and Methods attributed with StackTraceHidden will be omitted from the stack trace text shown in StackTrace.ToString() and Exception.StackTrace
 
-However **in F#** it seems that if exception is thrown inside given method, it **will** be inbcluded.
+However **in F#** it seems that if exception is thrown inside given method, it **will** be included.
 ## C# is fine
 
 In `csharprepl`:
