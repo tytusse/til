@@ -71,7 +71,7 @@ System.Exception: oops
    at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
 ```
 
-**However**, throwin one gets included:
+**However**, throwing one gets included:
 
 ```F#
 run(fun() -> run(fun() -> runThrow(fun() -> failwith "oops")))
@@ -88,6 +88,17 @@ System.Exception: wrapped inner
    at System.RuntimeMethodHandle.InvokeMethod(ObjectHandleOnStack target, Void** arguments, ObjectHandleOnStack sig, BOOL isConstructor, ObjectHandleOnStack result)
    at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
    at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+```
+
+This is also true for class member, i.e. in following class `RunThrowing` also appears in stacktrace.
+
+```F#
+[<StackTraceHidden>]
+type ExcludeFromTrace() =
+    member _.Run(f) = f()
+    member _.RunThrowing(f) =
+        try f()
+        with x -> raise(TestException("rethrow", x))
 ```
 
 
