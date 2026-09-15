@@ -24,7 +24,11 @@ class Foo {
 ```
 then
 ```C#
-try { Foo.Bar(() => Foo.Bar(() => throw new Exception("oops"))); } catch (Exception x) { Console.WriteLine(x.StackTrace); }
+try {
+  Foo.Bar(() => Foo.Bar(() => throw new Exception("oops")));
+} catch (Exception x) {
+  Console.WriteLine(x.StackTrace);
+}
 ```
 yielded
 ```
@@ -33,7 +37,11 @@ yielded
    at Submission#13.<<Initialize>>d__0.MoveNext()
 ```
 ```C#
-try { Foo.Bar(() => Foo.BarThrow(() => throw new Exception("oops"))); } catch (Exception x) { Console.WriteLine(x.StackTrace); }
+try {
+  Foo.Bar(() => Foo.BarThrow(() => throw new Exception("oops")));
+} catch (Exception x) {
+  Console.WriteLine(x.StackTrace);
+}
 ```
 Is also fine
 ```
