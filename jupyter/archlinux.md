@@ -1,6 +1,7 @@
 # installing
 Instructions: https://wiki.archlinux.org/title/Jupyter
-TL;DR,
+
+TL;DR:
 
 ```bash
 yay jupyter
