@@ -1,7 +1,7 @@
 Tool to query yaml/json: https://mikefarah.gitbook.io/yq
 On arch: `yay go-yq`
 
-NOTE: there is a more mature JSON tool: `jq`, however `yq` sees enough for now.
+NOTE: there is a more mature JSON tool: `jq`, however `yq` seems enough for now.
 
 See 
 - [some scripts](../yq/)
