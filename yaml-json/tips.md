@@ -3,10 +3,6 @@ On arch: `yay go-yq`
 
 NOTE: there is a more mature JSON tool: `jq`, however `yq` seems enough for now.
 
-See 
-- [some scripts](../yq/)
-- [YAML tips](../yaml/yaml-tips.md)
-
 Example usage: https://mikefarah.gitbook.io/yq/recipes
 
 - YQ is actually an **imperative** language - it "changes" the input with `=` and `|=` operators
