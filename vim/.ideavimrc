@@ -69,3 +69,4 @@ map <C-0> <Action>(NextDiff)
 map <C-9> <Action>(PreviousDiff)
 nnoremap <CR> o<esc>
 nnoremap <S-CR> O<esc>d0
+autocmd BufEnter * stopinsert
