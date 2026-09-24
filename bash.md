@@ -5,3 +5,8 @@ https://devhints.io/bash
 ```bash
 SCRIPT_DIR=$(realpath $(dirname $0))
 ```
+
+# hashbang with env
+```bash
+#!/usr/bin/env bash
+```
