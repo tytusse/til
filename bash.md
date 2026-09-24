@@ -1,18 +1,16 @@
 # nice cheat-sheet
 https://devhints.io/bash
 
-# xtrace, pipefail and other good defaults
-```bash
-set -x
-set -eou pipefail
-```
+# template script
+- uses `env` hashbang
+- sets xtrace
+- puts script dir into var
 
-# current script dir spell
-```bash
-SCRIPT_DIR=$(realpath $(dirname $0))
-```
-
-# hashbang with env
 ```bash
 #!/usr/bin/env bash
+
+set -x
+set -eou pipefail
+
+SCRIPT_DIR=$(realpath $(dirname $0))
 ```
