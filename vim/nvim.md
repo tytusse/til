@@ -58,6 +58,12 @@ https://stackoverflow.com/a/2288780
   ```lua
   vim.opt.background = "light" -- or "dark"
   ```
+# old files / recent
+Using [Telescope plugin](https://github.com/nvim-telescope/telescope.nvim):
+
+```nvim
+:Telescope oldfiles
+```
 
 # syntax highlighting (for nvchad/lazy/treesitter)
 NVChad uses treesitter. "What worked" should be ok for any other setup with treesitter installed.
