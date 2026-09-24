@@ -58,12 +58,12 @@ set clipboard=unnamedplus,unnamed
 map <leader>i <Action>(ShowHoverInfo)
 map <leader>m <Action>(ShowPopupMenu)
 map <leader>t <Action>(RiderUnitTestRunContextAction)
-set ideaput
+" set ideaput
 set ignorecase
 set relativenumber
 set commentary
 set quickscope
-set which-key
+" set which-key
 
 map <C-0> <Action>(NextDiff)
 map <C-9> <Action>(PreviousDiff)
