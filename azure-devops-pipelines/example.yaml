@@ -39,13 +39,17 @@ pool:
 
 steps:
 - checkout: self
-# in default branch
 - checkout: repo-foobar-alias
   path: "second"
+
+# this will use variable no problem (unlike `ref` in `repositiry` element)
+- checkout: "git://MyProject/Foobar@${{ variables.branch_in_foobar }}"
+  path: "inlineCheckout"
 - bash: |
     echo "Current Foobar repo branch variable: $(variables.branch_in_foobar)"
     # for multiple checkouts, the repo dirs are in Pipeline.Workspace
     # for single checkout, they are in Build.SourcesDirectory
     # this is somewhat uneven and confusing imho ...
     cat $(Pipeline.Workspace)/second/a-file.txt
-  displayName: 'some description'
+    cat $(Pipeline.Workspace)/inlineCheckout/a-file.txt
+  displayName: 'see a-file.txt in each branch'
