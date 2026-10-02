@@ -1,6 +1,3 @@
-Example pipe with few concepts (need verification!)
-
-```yaml
 # this will be avaliabe in UI for manual run
 parameters:
 - name: branch_for_second_repo
@@ -50,4 +47,3 @@ steps:
     # this is somewhat uneven and confusing imho ...
     cat $(Pipeline.Workspace)/second/a-file.txt
   displayName: 'some description'
-```
