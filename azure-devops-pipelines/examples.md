@@ -43,10 +43,6 @@ steps:
 # in default branch
 - checkout: repo-foobar-alias
   path: "second"
-# override default
-- checkout: repo-foobar-alias
-  path: "third"
-  branch: barbaz
 - bash: |
     echo "Current Foobar repo branch variable: $(variables.branch_in_foobar)"
     cat $(Build.SourcesDirectory)/second/a-file.txt
