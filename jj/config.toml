@@ -22,7 +22,9 @@ if [[ -z "$1" ]]; then
  echo "1st argument must be a bookmark expr"
  exit 1
 fi
-AT="${2:-@-}"
+# 2nd arg will be used to selecty change for the bookmark ("AT")
+# default value will be '@-' (previous change) to follow the "stage" or "sqasher" style workflow
+AT="${2:-@-}" 
 jj b c "$1" -r "$AT"
 jj b t "$1"
 """, ""]
