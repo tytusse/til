@@ -1,0 +1,36 @@
+# example config
+#:schema https://docs.jj-vcs.dev/latest/config-schema.json
+
+[user]
+name = "Tomasz Sztokinier"
+email = "tomasz.sztokinier@gmail.com"
+
+[revsets]
+# to have more in default log, i.e. show other changes than current @
+log = "ancestors(present(@), 5) | ancestors(immutable_heads().., 2) | present(trunk()) | explicitly_immutable()"
+# advance to 1st change that has description
+bookmark-advance-to = 'heads(::@ & description(regex:".+"))'
+
+[aliases]
+diff- = ["diff", "-r", "@-"]
+# take all my current work and rebase on trunk() 
+rebase-all = ["rebase", "-o", "trunk()", "-s", "roots(my_work_behind_trunk())"]
+# create and track bookmark (I dont know why this is not a built-in in some form)
+create-rb = ["util", "exec", "--", "bash", "-c", """
+set -euo pipefail
+if [[ -z "$1" ]]; then
+ echo "1st argument must be a bookmark expr"
+ exit 1
+fi
+AT="${2:-@-}"
+jj b c "$1" -r "$AT"
+jj b t "$1"
+""", ""]
+
+[revset-aliases]
+# make all not-mine immutable apart from the defaults.
+"immutable_heads()" = "builtin_immutable_heads() | heads(~mine())"
+"my_work_behind_trunk()" = "reachable(trunk().., mutable())"
+
+[ui]
+editor = "nvim"
