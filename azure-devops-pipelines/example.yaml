@@ -29,7 +29,9 @@ resources:
   repositories:
   - repository: repo-foobar-alias
     name: Foobar
-    ref: ${{ variables.branch_in_foobar }}
+    # FAIL: will always use "main" because for whatever reason, variable is not used (I am guessing it turns out "empty")
+    # ref: ${{ variables.branch_in_foobar }}
+    ref: ${{ parameters.branch_for_second_repo }} # somehow this will work with parameters
     type: git
 
 pool:
