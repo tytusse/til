@@ -1,8 +1,16 @@
-Example pipe with few concepts
+Example pipe with few concepts (need verification!)
 
 ```yaml
+parameters:
+- name: branch_for_second_repo
+  type: string
+  default: 'main'
+  values: # allowed values
+  - main
+  - tests
+
 variables:
-  branch_in_foobar: 'baz'
+  branch_in_foobar: ${{ parameters.branch_for_second_repo }}
 
 # trigger: none - to disable auto-trigger
 trigger: 
@@ -30,9 +38,13 @@ pool:
 
 steps:
 - checkout: self
+# in default branch
 - checkout: repo-foobar-alias
-  branch: ${{ variables.branch_in_foobar }}
   path: "second"
+# override default
+- checkout: repo-foobar-alias
+  path: "third"
+  branch: barbaz
 - bash: |
     echo "Current Foobar repo branch variable: $(variables.branch_in_foobar)"
     cat $(Build.SourcesDirectory)/second/a-file.txt
