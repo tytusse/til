@@ -1,10 +1,12 @@
 Example pipe with few concepts (need verification!)
 
 ```yaml
+# this will be avaliabe in UI for manual run
 parameters:
 - name: branch_for_second_repo
   type: string
-  default: 'main'
+  default: 'main' # I will guerss that if we dont provide it, automatic run will fail or AZ will fail saving it (???).
+
   values: # allowed values
   - main
   - tests
