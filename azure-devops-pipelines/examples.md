@@ -45,6 +45,9 @@ steps:
   path: "second"
 - bash: |
     echo "Current Foobar repo branch variable: $(variables.branch_in_foobar)"
-    cat $(Build.SourcesDirectory)/second/a-file.txt
+    # for multiple checkouts, the repo dirs are in Pipeline.Workspace
+    # for single checkout, they are in Build.SourcesDirectory
+    # this is somewhat uneven and confusing imho ...
+    cat $(Pipeline.Workspace)/second/a-file.txt
   displayName: 'some description'
 ```
