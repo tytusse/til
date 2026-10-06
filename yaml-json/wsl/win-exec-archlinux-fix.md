@@ -13,3 +13,4 @@ reintroduce it with magic config as `systemd` "thing".
 The solution from link above
 - create `/usr/lib/binfmt.d/WSLInterop.conf` file
 - make it have content: `:WSLInterop:M::MZ::/init:PF`
+- restart WS: (`wsl --shutdown` or `wsl -t <your-distro-name-here>`)
