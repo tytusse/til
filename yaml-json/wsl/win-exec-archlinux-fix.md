@@ -2,7 +2,7 @@
 
 Note: for WSL v. `3.0.1.0` with archlinux.
 
-After `wsl --update` to version `3.0.1.0` executing of windows executables bot broken
+After `wsl --update` to version `3.0.1.0` executing of windows executables got broken
 - at first, it started to use `mono` to run **ALL** win exec and started to fail (obviousely) with:
   > File does not contain a valid CIL image. 
 - after removing mono, it startet do fail with
