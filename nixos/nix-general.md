@@ -1,5 +1,9 @@
 **Note**: examples are in `fish`
+# some usefull/common commands
+- `nixos-rebuild list-generations` - list generations as shown in boot menu
+- `nix-collect-garbage --delete-older-than 30d` - delete older than 30d
 
+ 
 # resolve package root dir by associated command name 
 For example, if we have path-visible command named `some-command`, then
 
