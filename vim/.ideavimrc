@@ -52,6 +52,10 @@ Plug 'tpope/vim-surround'
 
 inoremap jk <Esc>
 set ideajoin
+" according to copilot, this should help with Rider "aggressive" undo behavior
+set undolevels=1000
+set undofile
+
 set clipboard=unnamedplus,unnamed
 
 " shows popup with hind under hightlighted word
