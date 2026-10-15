@@ -53,8 +53,9 @@ Plug 'tpope/vim-surround'
 inoremap jk <Esc>
 set ideajoin
 " according to copilot, this should help with Rider "aggressive" undo behavior
+" some of its advices did not work (undofile is not in IdeaVim)
 set undolevels=1000
-set undofile
+" set undofile "-> does not work
 
 set clipboard=unnamedplus,unnamed
 
