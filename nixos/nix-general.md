@@ -3,6 +3,22 @@
 - `nixos-rebuild list-generations` - list generations as shown in boot menu
 - `nix-collect-garbage --delete-older-than 30d` - delete older than 30d
 
+# updating non-flake nix
+General guide is on nix wiki [here](https://wiki.nixos.org/wiki/Updating_NixOS#For_non-flake_configurations)
+TL;DR; - **execute all `nix-channel` commands as ROOT**, otherwise it wont work on standard installations.
+Probably would work without root if configured appropriately, but for vanilla installation it is what it is.
+
+Update is rougly
+- go to root (`sudo bash`, `sudo fish`, ...) OR call all commands via `sudo`
+- ```bash
+  sudo bash
+  nix-channel --update
+  nixos-rebuild switch
+  exit # quit sudo bash - good practice
+  reboot # bneeds reboot to take effect
+  ```
+- alternatively `nixos-rebuild boot` if one does not want to apply changes right away
+
  
 # resolve package root dir by associated command name 
 For example, if we have path-visible command named `some-command`, then
