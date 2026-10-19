@@ -2,6 +2,7 @@
 # some usefull/common commands
 - `nixos-rebuild list-generations` - list generations as shown in boot menu
 - `nix-collect-garbage --delete-older-than 30d` - delete older than 30d
+- `sudo nix-channel --list` list channells (note the `sudo` - usually needed)
 
 # updating non-flake nix
 General guide is on nix wiki [here](https://wiki.nixos.org/wiki/Updating_NixOS#For_non-flake_configurations)
