@@ -84,3 +84,20 @@ RUN echo "Foo: $foo"
 ```
 Foo: bar
 ```
+# COPY / RUN cp ... "obvious" GOTCHAs
+Having
+`COPY file.txt /non-existing-dir/`
+
+Note trailing `/` after dir name. If not specified, then `file.txt` will be copied to `/non-existing-dir` file, NOT to `/non-existing-dir/file.txt`.
+This is obvious and makes sense in terms of "how COPY should know if non-existing path is a dir or file?" but it can be easily omitted and will cause confusing bugs.
+
+Same for `RUN cp`: `RUN cp file.txt /non-existing-dir/` - trailing `/` is required to make this copy file to new dir.
+
+**best practice**: always specify trailing `/` when meaning to reference dir as source/target. It has two advantages
+- if target dir does not exist - will be created
+- if target/source exists and is not a dir - likely will cause command to fail informing us about some potential mistake/bug.
+
+# COPY / cp wildcards work
+`COPY /some-dir/*.txt /other-dir/`
+
+
