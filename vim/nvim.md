@@ -9,6 +9,10 @@ From: https://tech.serhatteker.com/post/2022-07/dump-command-output-to-buffer-in
 # print current file parent folder
 `:echo expand('%:p:h')`
 
+# yank current file in normal mode
+`"%p`
+In other words - `%` register holds file path (seems that it is relative to workdir of `vim`/`nvim`/`vscode`).
+
 # readonly
 - https://neovim.io/doc/user/starting/#-R
 - `nvim -R <filename>`
