@@ -11,6 +11,7 @@ From: https://tech.serhatteker.com/post/2022-07/dump-command-output-to-buffer-in
 
 # yank current file in normal mode
 `"%p`
+
 In other words - `%` register holds file path (seems that it is relative to workdir of `vim`/`nvim`/`vscode`).
 
 # readonly
